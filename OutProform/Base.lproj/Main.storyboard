@@ -1,25 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="640" placeholderIntrinsicHeight="960" image="SignupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jh1-wp-6Pi">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="960"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-Lc-b7K" userLabel="TPKA Scroll View" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="960"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="usernameField" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70A-sg-Tgf" userLabel="Username">
+                                        <rect key="frame" x="98" y="388" width="504" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Username" label="Username"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="wyM-Of-VHz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="jerseyField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JERSEY #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-Aa-dV2" userLabel="Jersey">
+                                        <rect key="frame" x="98" y="439" width="444" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Jersey #" label="Jersey #"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="480" id="04x-NK-Psa"/>
+                                            <constraint firstAttribute="height" constant="30" id="pID-eQ-JRQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="positionField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="POSITION (optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sn9-hb-iXD" userLabel="Position">
+                                        <rect key="frame" x="98" y="499" width="444" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Position" label="Position"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="480" id="bVd-3f-Tni"/>
+                                            <constraint firstAttribute="height" constant="30" id="h00-eU-kxt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="heightField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HEIGHT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-sO-37z" userLabel="Height">
+                                        <rect key="frame" x="98" y="555" width="214" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Height" label="Height"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="weightField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WEIGHT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uu2-cH-amg" userLabel="Weight">
+                                        <rect key="frame" x="320" y="555" width="222" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Weight" label="Weight"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsD-a5-aiw" userLabel="Save">
+                                        <rect key="frame" x="98" y="609" width="444" height="60"/>
+                                        <color key="backgroundColor" red="0.54117649793624878" green="0.7882353663444519" blue="0.15686275064945221" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ix-n6-2IN" userLabel="Signup w/ Facebook">
+                                        <rect key="frame" x="98" y="685" width="444" height="105"/>
+                                        <state key="normal" image="FacebookSignup">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sn9-hb-iXD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGJ-Aa-dV2" secondAttribute="bottom" constant="15" id="4Kb-Fh-jyB"/>
+                                    <constraint firstItem="nGJ-Aa-dV2" firstAttribute="top" secondItem="70A-sg-Tgf" secondAttribute="bottom" constant="15" id="CnT-bi-Efk"/>
+                                    <constraint firstAttribute="centerX" secondItem="70A-sg-Tgf" secondAttribute="centerX" id="DC1-Y4-FOQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nGJ-Aa-dV2" secondAttribute="trailing" constant="68" id="FtM-FH-iml"/>
+                                    <constraint firstItem="70A-sg-Tgf" firstAttribute="leading" secondItem="hpK-Lc-b7K" secondAttribute="leading" constant="68" id="KjG-ua-lNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sn9-hb-iXD" secondAttribute="trailing" constant="68" id="QLz-iw-KWK"/>
+                                    <constraint firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="70A-sg-Tgf" secondAttribute="top" constant="77" id="ZFl-7z-0Lv"/>
+                                    <constraint firstItem="nGJ-Aa-dV2" firstAttribute="leading" secondItem="hpK-Lc-b7K" secondAttribute="leading" constant="68" id="ZOD-DU-Gbh"/>
+                                    <constraint firstItem="Sn9-hb-iXD" firstAttribute="leading" secondItem="hpK-Lc-b7K" secondAttribute="leading" constant="68" id="vGX-14-3jG"/>
+                                    <constraint firstAttribute="trailing" secondItem="70A-sg-Tgf" secondAttribute="trailing" constant="68" id="vWY-BO-c5u"/>
+                                    <constraint firstAttribute="centerX" secondItem="Sn9-hb-iXD" secondAttribute="centerX" id="z5m-2K-GOc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hpK-Lc-b7K" secondAttribute="bottom" id="1Qy-jh-oV7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jh1-wp-6Pi" secondAttribute="bottom" id="2d8-lU-wQo"/>
+                            <constraint firstItem="hpK-Lc-b7K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="7G4-31-g35"/>
+                            <constraint firstItem="hpK-Lc-b7K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="B2D-1s-rAp"/>
+                            <constraint firstItem="jh1-wp-6Pi" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="FI5-RK-2Hk"/>
+                            <constraint firstAttribute="centerY" secondItem="jh1-wp-6Pi" secondAttribute="centerY" id="Lja-Mh-alj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hpK-Lc-b7K" secondAttribute="trailing" constant="-16" id="h6I-Le-Ctf"/>
+                            <constraint firstAttribute="centerX" secondItem="jh1-wp-6Pi" secondAttribute="centerX" id="iGs-Pc-Yzo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jh1-wp-6Pi" secondAttribute="trailing" id="m9Z-Az-WEv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jh1-wp-6Pi" secondAttribute="bottom" id="sxQ-Ac-UlM"/>
+                            <constraint firstItem="jh1-wp-6Pi" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="tIU-pQ-M0v"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="m9Z-Az-WEv"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="640" height="960"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FacebookSignup" width="423" height="95"/>
+        <image name="SignupBackground" width="640" height="960"/>
+    </resources>
 </document>
